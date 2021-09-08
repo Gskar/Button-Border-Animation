@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button Animated Border</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="#" id="btn">
+      <span id="span1"></span>
+      <span id="span2"></span>
+      <span id="span3"></span>
+      <span id="span4"></span>
+      Hover Me
+    </a>
+    <script>
+      const span1 = document.querySelector("#span1"),
+        span2 = document.querySelector("#span2"),
+        span3 = document.querySelector("#span3"),
+        span4 = document.querySelector("#span4"),
+        btn = document.querySelector("#btn");
+
+      btn.addEventListener("mouseenter", () => {
+        span1.classList.add("addAnimation1");
+        span1.style.opacity = 1;
+        span2.classList.add("addAnimation2");
+        span2.style.opacity = 1;
+        span3.classList.add("addAnimation3");
+        span3.style.opacity = 1;
+        span4.classList.add("addAnimation4");
+        span4.style.opacity = 1;
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        span1.classList.remove("addAnimation1");
+        span1.style.opacity = 0;
+        span2.classList.remove("addAnimation2");
+        span2.style.opacity = 0;
+        span3.classList.remove("addAnimation3");
+        span3.style.opacity = 0;
+        span4.classList.remove("addAnimation4");
+        span4.style.opacity = 0;
+      });
+    </script>
+  </body>
+</html>
